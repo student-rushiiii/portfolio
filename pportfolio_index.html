@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <style>
+        /* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: #333;
+    background: linear-gradient(135deg, #f9f9f9, #e3e3e3);
+    overflow-x: hidden;
+}
+
+h1, h2, h3 {
+    color: #222;
+    text-align: center;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+header {
+    background: linear-gradient(135deg, #4facfe, #00f2fe);
+    color: #fff;
+    padding: 2rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3rem;
+    animation: fadeInDown 1s ease-out;
+}
+
+header p {
+    margin: 0.5rem 0 0;
+    font-size: 1.5rem;
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Section Styles */
+section {
+    padding: 3rem 1rem;
+    margin: 2rem auto;
+    max-width: 900px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+section:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+section#about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+}
+
+section#about img {
+    max-width: 180px;
+    border-radius: 50%;
+    border: 4px solid #4facfe;
+}
+
+section#about p {
+    flex: 1;
+    font-size: 1.2rem;
+    color: #555;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+}
+
+ul li {
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+    color: #fff;
+    margin: 0.5rem 0;
+    padding: 0.8rem;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+}
+
+ul li:hover {
+    transform: scale(1.1);
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.project {
+    background: linear-gradient(135deg, #43e97b, #38f9d7);
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    position: relative;
+    transition: transform 0.3s ease-in-out;
+}
+
+.project:hover {
+    transform: rotateY(15deg) rotateX(15deg);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
+.project img {
+    max-width: 100%;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.project h3 {
+    margin: 0.5rem 0;
+    font-size: 1.4rem;
+}
+
+/* Resume Section */
+#resume a {
+    display: inline-block;
+    margin: 1rem auto;
+    padding: 0.8rem 1.5rem;
+    color: #fff;
+    background: linear-gradient(135deg, #f093fb, #f5576c);
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    font-size: 1.2rem;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+#resume a:hover {
+    background: linear-gradient(135deg, #f5576c, #f093fb);
+    transform: scale(1.1);
+}
+
+/* Contact Section */
+#contact p {
+    text-align: center;
+    font-size: 1rem;
+}
+
+#contact a {
+    color: #4facfe;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#contact a:hover {
+    color: #f5576c;
+    text-decoration: underline;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    background: #333;
+    color: #fff;
+    position: relative;
+    overflow: hidden;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+    </style>
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Rushikesh Bhujbal</h1>
+        <p>I am Rushikesh Bhujbal, a passionate Web Develope</p>
+    </header>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2>About Me</h2>
+        
+        <p>A passionate computer developer specializing in front-end development, creating intuitive and visually appealing user interfaces. Skilled in modern web technologies and frameworks to deliver responsive and dynamic applications. Continuously exploring innovative solutions to enhance user experiences. .</p>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML & CSS</li>
+            <li>Java Script</li>
+            <li>react js & node js</li>
+        </ul>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Wheather App</h3>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRaBG46b8VgGZ6xKEZOjaui-F5IFjKNlRNFaw&s" alt="Project Image">
+            <p>Stay informed with our weather app! Get accurate, real-time forecasts, including temperature, humidity, and precipitation. Enjoy hourly updates, 7-day forecasts, and severe weather alerts. Plan your day with ease using our sleek, user-friendly design!.</p>
+        </div>
+    </section>
+
+    <!-- Resume Section -->
+    <section id="resume">
+        <h2>Resume</h2>
+        <a href="resume.pdf" download>Download My Resume</a>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: <a href="mailto:your-email@example.com">your-bhujbalrushikesh2004@example.com</a></p>
+        <p>Phone: 8530804026</p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Rushikesh Bhujbal. All rights reserved.</p>
+    </footer>
+</body>
+</html>
